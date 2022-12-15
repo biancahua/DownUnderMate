@@ -27,7 +27,11 @@ const animalArr = [
     "quokka.png",
     "tarantula.png",
     "taz.png",
-    "kangaroo.jpeg"
+    "kangaroo.jpeg",
+    "echina.png",
+    "kookaburra.png",
+    "possum.png",
+    "toad.png"
 ]
 
 chrome.runtime.onMessage.addListener(replaceImage)
@@ -36,6 +40,9 @@ function replaceImage() {
     // retrieve images from webpage as an array (webImgs)
     let webImg = document.getElementsByTagName('img');
     console.log(webImg);
+    //open a fun link in new tab
+    // const emuPage = 'https://www.researchgate.net/profile/Srdan-Jovanovic-2/publication/334614967_The_Emu_Strikes_Back_An_Inquiry_into_Australia%27s_Peculiar_Military_Action_of_1932/links/5d360c20a6fdcc370a576b69/The-Emu-Strikes-Back-An-Inquiry-into-Australias-Peculiar-Military-Action-of-1932.pdf'
+    // chrome.tabs.create({ url: emuPage });
     
     // iterate through argument array using while loop and reassign each index image to random image
     for (imgSrc of webImg) {
